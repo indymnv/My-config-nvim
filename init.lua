@@ -446,6 +446,17 @@ vim.g.slime_default_config = {
   socket_name = vim.api.nvim_eval('get(split($TMUX, ","), 0)'),
   target_pane = '{top-right}',
 }
+
+require'lspconfig'.julials.setup{
+    on_new_config = function(new_config, _)
+        local julia = vim.fn.expand("~/.julia/environments/nvim-lspconfig/bin/julia")
+        if require'lspconfig'.util.path.is_file(julia) then
+	    vim.notify("Hello!")
+            new_config.cmd[1] = julia
+        end
+    end
+}
+
 -- set vim one side and repl in other side
 -- slime.slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
 -- The line beneath this is called `modeline`. See `:help modeline`

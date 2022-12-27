@@ -188,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/indynavarro/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
+  },
+  ["vim-slime"] = {
+    loaded = true,
+    path = "/Users/indynavarro/.local/share/nvim/site/pack/packer/start/vim-slime",
+    url = "https://github.com/jpalardy/vim-slime"
   }
 }
 
